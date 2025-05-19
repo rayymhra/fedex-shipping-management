@@ -2,13 +2,11 @@
 require '../includes/db.php';
 require '../includes/functions.php';
 startSession();
-// requireLogin();
-
-// if ($_SESSION['role'] !== 'admin') { exit('Only admins allowed'); }
+requireLogin();
+if ($_SESSION['role'] !== 'admin') { exit('Only admins allowed'); }
 
 $conn = db();
 
-/* ---------- Handle ADD ---------- */
 if (isset($_POST['add_user'])) {
     $name  = $_POST['name'];
     $email = $_POST['email'];
@@ -23,15 +21,16 @@ if (isset($_POST['add_user'])) {
     header('Location: users.php?success=1'); exit;
 }
 
-/* ---------- Handle DELETE ---------- */
+
 if (isset($_GET['del'])) {
     $id = intval($_GET['del']);
     mysqli_query($conn, "DELETE FROM users WHERE id = $id LIMIT 1");
     header('Location: users.php'); exit;
 }
 
-/* ---------- Fetch list ---------- */
 $list = mysqli_query($conn, "SELECT id, name, email, role FROM users WHERE deleted_at IS NULL");
+
+include "../includes/header.php"
 ?>
 <!doctype html>
 <html lang="en">
@@ -40,7 +39,7 @@ $list = mysqli_query($conn, "SELECT id, name, email, role FROM users WHERE delet
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <title>User Management</title>
 </head>
-<body class="container mt-4">
+<body>
 
 <h3>Add New User</h3>
 <form method="post" class="row g-2 mb-4">

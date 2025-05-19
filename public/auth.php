@@ -9,7 +9,7 @@ $action = $_GET['action'] ?? 'login';
 
 if ($action === 'logout') {
     logoutUser();
-    header('Location: /auth.php');
+    header('Location: auth.php');
     exit;
 }
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user && password_verify($pass, $user['password_hash'])) {
         loginUser($user['id'], $user['role']);
-        header('Location: /index.php');
+        header('Location: index.php');
         exit;
     }
     $error = 'Wrong email or password';
