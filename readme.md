@@ -14,7 +14,7 @@
 [x] customer list -> customers.php<br>
 [] reports (Analytics & KPIs) -> admin_reports.php<br>
 - staff <br>
-[] customer management (Create / edit customers) -> customer_management<br>
+[x] customer management (Create / edit customers) -> customer_management<br>
 [] address management (maybe put it together in the customer management) <br>
 [] New shipment, assign courier <br>
 [] tracking (Update shipment status) <br>
@@ -25,7 +25,7 @@
 <br>
 [] notif sweetalert
 [] trash (optional, if i had the time)
-
+[] check all footer
 <br>
 
 # Databases:

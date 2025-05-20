@@ -40,7 +40,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= htmlspecialchars($customer['notes']) ?></td>
                 <td><?= date("Y-m-d", strtotime($customer['created_at'])) ?></td>
                 <td>
-                    <!-- <a href="customer_view.php?id=<?= $customer['id'] ?>" class="btn btn-info btn-sm">View</a> -->
+                    <a href="customer_view.php?id=<?= $customer['id'] ?>" class="btn btn-info btn-sm">View</a>
                     <a href="customer_edit.php?id=<?= $customer['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
                     <a href="customer_delete.php?id=<?= $customer['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this customer?')">Delete</a>
                 </td>
