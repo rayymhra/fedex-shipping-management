@@ -3,6 +3,8 @@ require '../includes/db.php';
 require '../includes/functions.php';
 startSession();
 requireLogin();
+// requireAdmin();
+
 $conn = db();
 
 $role = $_SESSION['role'];
@@ -17,8 +19,10 @@ include "../includes/header.php";
   <title>Dashboard</title>
 </head>
 <body>
+  
 
-<h2 class="mb-4">Dashboard – <?= ucfirst($role) ?></h2>
+<h2 class="mb-4">Dashboard – <?= ucfirst($role) ?></h2> 
+
 
 <?php
 
@@ -82,9 +86,7 @@ elseif ($role === 'staff'): ?>
   </div>
 
 <?php
-/* ===============================================================
-   COURIER DASHBOARD
-   ===============================================================*/
+
 else: // courier ?>
 
   <div class="row g-3 mb-4">

@@ -6,23 +6,24 @@
 <br>
 
 # features:
-[x] auth
-[x] dashboard / navbar
-- admin
-[x] manage users
-[] courier management (add / retire courier)
-[] customer list
-[] reports (Analytics & KPIs)
-- staff
-[] customer management (Create / edit customers)
-[] address management (maybe put it together in the customer management)
-[] New shipment, assign courier
-[] tracking (Update shipment status)
-[] courier list
--courier
-[] my shipments (see jobs that are assigned to them)
-[] update status (Picked-up / Delivered)
-
+[x] auth  <br>
+[x] dashboard / navbar <br>
+- admin <br>
+[x] manage users <br>
+[x] courier management (add / retire courier) <br>
+[] customer list <br>
+[] reports (Analytics & KPIs) <br>
+- staff <br>
+[] customer management (Create / edit customers) <br>
+[] address management (maybe put it together in the customer management) <br>
+[] New shipment, assign courier <br>
+[] tracking (Update shipment status) <br>
+[] courier list <br>
+-courier <br>
+[] my shipments (see jobs that are assigned to them)<br>
+[] update status (Picked-up / Delivered) <br>
+<br>
+[] notif sweetalert
 [] trash (optional, if i had the time)
 
 <br>
