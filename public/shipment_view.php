@@ -58,6 +58,15 @@ $shipment = mysqli_fetch_assoc($result);
             <p><strong>Created At:</strong> <?= $shipment['created_at'] ?></p>
         </div>
     </div>
+    <div class="mt-3">
+        <a href="shipment_edit.php?id=<?= $shipment['id'] ?>" class="btn btn-warning">Edit</a>
+            <a href="shipment_delete.php?id=<?= $shipment['id'] ?>" 
+               class="btn btn-danger"
+               onclick="return confirm('Are you sure you want to delete this shipment?');">
+                Delete
+            </a>
+    </div>
+    
 </div>
 </body>
 </html>
