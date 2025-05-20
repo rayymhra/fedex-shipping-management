@@ -15,9 +15,9 @@
 [] reports (Analytics & KPIs) -> admin_reports.php<br>
 - staff <br>
 [x] customer management (Create / edit customers) -> customer_management<br>
-[] address management (maybe put it together in the customer management) <br>
-[] New shipment, assign courier <br>
-[] tracking (Update shipment status) <br>
+[x] address management (maybe put it together in the customer management) -> address_add.php, address_delete.php, address_edit.php<br>
+[] shipments(create & update status, print labels, assign courier) <br>
+[] tracking (Update shipment status, add checkpoints) <br>
 [] courier list <br>
 -courier <br>
 [] my shipments (see jobs that are assigned to them)<br>
@@ -26,6 +26,7 @@
 [] notif sweetalert
 [] trash (optional, if i had the time)
 [] check all footer
+[] check all require
 <br>
 
 # Databases:
