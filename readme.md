@@ -9,9 +9,9 @@
 [x] auth  <br>
 [x] dashboard / navbar <br>
 - admin <br>
-[x] manage users <br>
-[x] courier management (add / retire courier) <br>
-[] customer list <br>
+[x] manage users -> users.php (no edit for now)<br>
+[x] courier management (add / retire courier) ->  couriers.php, courier_add_info.php, courier_edit_info.php, courier_view_info.php<br>
+[] customer list -> customers.php<br>
 [] reports (Analytics & KPIs) <br>
 - staff <br>
 [] customer management (Create / edit customers) <br>
