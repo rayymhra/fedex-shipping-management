@@ -70,6 +70,7 @@ include "../includes/header.php";
                         <td><?= $row['expected_delivery_date'] ?? '-' ?></td>
                         <td>
                             <a href="shipment_view.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-primary">View</a>
+                            <a href="shipment_tracking.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-success">Track</a>
                         </td>
                     </tr>
                 <?php endwhile ?>
