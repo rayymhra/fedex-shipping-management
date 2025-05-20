@@ -11,10 +11,10 @@
 - admin <br>
 [x] manage users -> users.php (no edit for now)<br>
 [x] courier management (add / retire courier) ->  couriers.php, courier_add_info.php, courier_edit_info.php, courier_view_info.php<br>
-[] customer list -> customers.php<br>
-[] reports (Analytics & KPIs) <br>
+[x] customer list -> customers.php<br>
+[] reports (Analytics & KPIs) -> admin_reports.php<br>
 - staff <br>
-[] customer management (Create / edit customers) <br>
+[] customer management (Create / edit customers) -> customer_management<br>
 [] address management (maybe put it together in the customer management) <br>
 [] New shipment, assign courier <br>
 [] tracking (Update shipment status) <br>

@@ -26,12 +26,12 @@ $role = $_SESSION['role'] ?? '';
           <li class="nav-item"><a class="nav-link" href="users.php">Users</a></li>
           <li class="nav-item"><a class="nav-link" href="couriers.php">Couriers</a></li>
           <li class="nav-item"><a class="nav-link" href="customers.php">Customers</a></li>
-          <li class="nav-item"><a class="nav-link" href="shipments.php">Shipments</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin_reports.php">Reports</a></li>
        <?php endif; ?>
 
        <!-- ----- Staff Links ----- -->
        <?php if ($role === 'staff'): ?>
-          <li class="nav-item"><a class="nav-link" href="customers.php">Customers</a></li>
+          <li class="nav-item"><a class="nav-link" href="customer_management.php">Customers</a></li>
           <li class="nav-item"><a class="nav-link" href="shipments.php">Shipments</a></li>
           <li class="nav-item"><a class="nav-link" href="tracking.php">Tracking</a></li>
        <?php endif; ?>
