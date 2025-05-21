@@ -12,3 +12,7 @@ orange color: #fe5900 */
 .navbar li {
     margin-left: 10px;
 }
+
+body {
+      background-color: #f8f9fa !important;
+    }

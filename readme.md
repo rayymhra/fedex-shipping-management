@@ -28,7 +28,9 @@
 [v] add edit in admin user management
 
 # ui/ux
-[] navbar <br >
+[v] navbar <br >
+[] login page <br>
+[] dashboard <br>
 [] admin pages <br>
 [] staff pages <br>
 [] courier pages <br>
