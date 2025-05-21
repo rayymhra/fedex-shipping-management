@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // mysqli_query($conn, $upd) or die("DB error: " . mysqli_error($conn));
 
     // Insert new checkpoint
-    $ins = "INSERT INTO shipment_checkpoints 
+    $ins = "INSERT INTO tracking
             (shipment_id, checkpoint_location, checkpoint_note, checkpoint_time)
             VALUES
             ($shipment_id, '$checkpoint_location', '$checkpoint_note', '$timestamp')";
@@ -55,7 +55,7 @@ $shipment   = mysqli_fetch_assoc(
 );
 $checkpoints = mysqli_query(
     $conn,
-    "SELECT * FROM shipment_checkpoints 
+    "SELECT * FROM tracking
      WHERE shipment_id = $shipment_id 
      ORDER BY checkpoint_time DESC"
 );

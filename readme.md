@@ -23,7 +23,7 @@
 [v] my shipments (see jobs that are assigned to them)<br>
 [v] update status (Picked-up / Delivered) <br>
 <br>
-
+[] rename "shipment_checkpoints" table to "tracking"
 
 # ui/ux
 [] notif sweetalert <br>
