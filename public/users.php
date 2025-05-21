@@ -68,7 +68,9 @@ include "../includes/header.php"
         <td><?= $u['role'] ?></td>
         <td><a class="btn btn-sm btn-danger"
                href="users.php?del=<?= $u['id'] ?>"
-               onclick="return confirm('Delete this user?')">Del</a></td>
+               onclick="return confirm('Delete this user?')">Del</a>
+              <a class="btn btn-sm btn-warning" href="edit_user.php?id=<?= $u['id'] ?>">Edit</a>
+              </td>
       </tr>
     <?php endwhile; ?>
   </tbody>

@@ -1,0 +1,14 @@
+/* purple color: #4e148c
+orange color: #fe5900 */
+
+.navbar {
+    background-color: #4e148c !important;
+}
+
+.navbar li:hover a{
+    border-bottom: 1px solid white;
+}
+
+.navbar li {
+    margin-left: 10px;
+}

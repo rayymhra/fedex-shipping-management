@@ -19,18 +19,25 @@
 [v] shipments(create & update status, print labels, assign courier) <br>
 [v] tracking (Update shipment status, add checkpoints) <br>
 [] courier list <br>
--courier <br>
+- courier <br>
 [v] my shipments (see jobs that are assigned to them)<br>
 [v] update status (Picked-up / Delivered) <br>
 <br>
-[] rename "shipment_checkpoints" table to "tracking"
+
+[v] rename "shipment_checkpoints" table to "tracking"
+[v] add edit in admin user management
 
 # ui/ux
+[] navbar <br >
+[] admin pages <br>
+[] staff pages <br>
+[] courier pages <br>
 [] notif sweetalert <br>
 [] check all footer <br>
 [] check all require input validation <br>
 
-# Databases:
+
+#
 
 -- triggers to auto-roll shipment.status
 DELIMITER $$
