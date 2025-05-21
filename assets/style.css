@@ -14,5 +14,31 @@ orange color: #fe5900 */
 }
 
 body {
-      background-color: #f8f9fa !important;
-    }
+    background-color: #f8f9fa !important;
+}
+
+.btn-fedex {
+    background-color: #4e148c;
+    color: #fff;
+    border: none;
+}
+
+.btn-fedex:hover {
+    background-color: #3a0f6c;
+    color: white;
+}
+
+.btn-orange {
+    background-color: #fe5900;
+    color: #fff;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #e14f00;
+    color: #fff;
+}
+
+.btn-outline-purple {
+    border: #4e148c 1px solid;
+}

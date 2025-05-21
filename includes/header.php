@@ -46,7 +46,7 @@ $role = $_SESSION['role'] ?? '';
 
       <?php if ($role): ?>
         <span class="navbar-text text-light me-3"><?= ucfirst($role) ?></span>
-        <a class="btn btn-sm btn-outline-light" href="../public/auth.php?action=logout">Logout</a>
+        <a class="btn btn-orange" href="../public/auth.php?action=logout">Logout</a>
       <?php endif; ?>
     </div>
   </div>

@@ -29,8 +29,8 @@
 
 # ui/ux
 [v] navbar <br >
-[] login page <br>
-[] dashboard <br>
+[v] login page <br>
+[v] dashboard <br>
 [] admin pages <br>
 [] staff pages <br>
 [] courier pages <br>
