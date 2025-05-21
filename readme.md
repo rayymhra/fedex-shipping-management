@@ -20,14 +20,15 @@
 [v] tracking (Update shipment status, add checkpoints) <br>
 [] courier list <br>
 -courier <br>
-[] my shipments (see jobs that are assigned to them)<br>
-[] update status (Picked-up / Delivered) <br>
+[v] my shipments (see jobs that are assigned to them)<br>
+[v] update status (Picked-up / Delivered) <br>
 <br>
-[] notif sweetalert
-[] trash (optional, if i had the time)
-[] check all footer
-[] check all require
-<br>
+
+
+# ui/ux
+[] notif sweetalert <br>
+[] check all footer <br>
+[] check all require input validation <br>
 
 # Databases:
 

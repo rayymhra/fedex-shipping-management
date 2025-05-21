@@ -20,10 +20,10 @@ $allowed_statuses = ['pending','picked_up','in_transit','delivered','cancelled']
 // 2) Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Grab & validate status
-    $status = $_POST['status'] ?? '';
-    if (! in_array($status, $allowed_statuses, true)) {
-        die("Invalid status value.");
-    }
+    // $status = $_POST['status'] ?? '';
+    // if (! in_array($status, $allowed_statuses, true)) {
+    //     die("Invalid status value.");
+    // }
 
     // Grab checkpoint fields (basic trim + escape)
     $checkpoint_location = mysqli_real_escape_string($conn, trim($_POST['checkpoint_location'] ?? ''));
@@ -31,11 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $timestamp           = date('Y-m-d H:i:s');
 
     // Update shipment status
-    $upd = "UPDATE shipments 
-            SET status = '$status',
-                updated_at = NOW()
-            WHERE id = $shipment_id";
-    mysqli_query($conn, $upd) or die("DB error: " . mysqli_error($conn));
+    // $upd = "UPDATE shipments 
+    //         SET status = '$status',
+    //             updated_at = NOW()
+    //         WHERE id = $shipment_id";
+    // mysqli_query($conn, $upd) or die("DB error: " . mysqli_error($conn));
 
     // Insert new checkpoint
     $ins = "INSERT INTO shipment_checkpoints 
@@ -85,16 +85,16 @@ $checkpoints = mysqli_query(
 
     <!-- Success Alert -->
     <?php if (isset($_GET['added'])): ?>
-        <div class="alert alert-success">Status & checkpoint added successfully!</div>
+        <div class="alert alert-success">Checkpoint added successfully!</div>
     <?php endif; ?>
 
     <!-- Update Form -->
     <div class="card mb-4 shadow-sm">
         <div class="card-body">
-            <h5 class="card-title">Update Status & Add Checkpoint</h5>
+            <h5 class="card-title">Add Checkpoint</h5>
             <form method="post" class="row g-3">
-                <div class="col-md-3">
-                    <label class="form-label">Status</label>
+                <div class="col-md-6">
+                    <!-- <label class="form-label">Status</label>
                     <select name="status" class="form-select" required>
                         <?php foreach ($allowed_statuses as $s): ?>
                             <option value="<?= $s ?>"
@@ -102,9 +102,8 @@ $checkpoints = mysqli_query(
                                 <?= ucwords(str_replace('_',' ',$s)) ?>
                             </option>
                         <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="col-md-4">
+                    </select> -->
+
                     <label class="form-label">Location</label>
                     <input
                       type="text"
@@ -114,7 +113,10 @@ $checkpoints = mysqli_query(
                       required
                     >
                 </div>
-                <div class="col-md-4">
+                <!-- <div class="col-md-4">
+                    
+                </div> -->
+                <div class="col-md-5">
                     <label class="form-label">Note</label>
                     <input
                       type="text"

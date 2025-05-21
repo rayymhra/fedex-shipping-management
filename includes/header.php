@@ -38,8 +38,8 @@ $role = $_SESSION['role'] ?? '';
 
        <!-- ----- Courier Links ----- -->
        <?php if ($role === 'courier'): ?>
-          <li class="nav-item"><a class="nav-link" href="my_shipments.php">My Shipments</a></li>
-          <li class="nav-item"><a class="nav-link" href="tracking.php">Update Status</a></li>
+          <li class="nav-item"><a class="nav-link" href="my_shipments.php">Update Status</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="update_status.php">Update Status</a></li> -->
        <?php endif; ?>
 
      </ul>
