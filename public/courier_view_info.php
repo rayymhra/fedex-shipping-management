@@ -37,11 +37,14 @@
   <?php include '../includes/header.php'; ?>
 
   <div class="container mt-4">
-    <h2 class="mb-4">Courier Info</h2>
+    <h2 class="mb-4"></h2>
 
     <div class="card shadow">
+      <div class="card-header fedex-purple">
+          Courier Info
+      </div>
       <div class="card-body">
-        <h5 class="card-title">
+        <h5 class="card-title mb-4">
   <?php echo htmlspecialchars($data['user_name'])?> (<?php echo htmlspecialchars($data['name'])?>)
 </h5>
         <p class="card-text"><strong>Email:</strong> <?php echo htmlspecialchars($data['email'])?></p>
@@ -56,7 +59,7 @@
             <span class="badge bg-secondary">Inactive</span>
           <?php endif; ?>
         </p>
-        <a href="couriers.php" class="btn btn-secondary mt-3">← Back to Management</a>
+        <a href="couriers.php" class="btn btn-orange mt-3">Back to Management</a>
       </div>
     </div>
   </div>
