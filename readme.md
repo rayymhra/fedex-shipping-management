@@ -31,9 +31,29 @@
 [v] navbar <br >
 [v] login page <br>
 [v] dashboard <br>
-[] admin pages <br>
-[] staff pages <br>
-[] courier pages <br>
+- admin pages <br>
+[v] users.php <br>
+[] edit_user.php <br>
+[] couriers.php <br>
+[] courier_edit_info.php <br>
+[] courier_add_info.php <br>
+[] courier_view_info.php <br>
+[] customers.php <br>
+- staff pages <br>
+[] customer_management.php <br>
+[] customer_view.php <br>
+[] customer_edit.php <br>
+[] address_add.php <br>
+[] address_edit.php <br>
+[] customer_edit <br>
+[] shipments.php <br>
+[] shipment_view.php <br>
+[] shipment_edit.php <br>
+[] shipment_tracking <br>
+- courier pages <br>
+[] my_shipments.php <br>
+[] update_status.php <br>
+<br>
 [] notif sweetalert <br>
 [] check all footer <br>
 [] check all require input validation <br>

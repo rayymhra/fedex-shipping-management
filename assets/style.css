@@ -42,3 +42,8 @@ body {
 .btn-outline-purple {
     border: #4e148c 1px solid;
 }
+
+.fedex-purple {
+    background-color: #4e148c;
+    color: #fff;
+}
