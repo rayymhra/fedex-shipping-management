@@ -22,9 +22,14 @@ include "../includes/header.php";
 ?>
 
 <div class="container py-4">
-    <h2>Courier Management</h2>
-    <table class="table table-bordered table-striped">
-      <thead class="table-dark">
+    <h3 class="text-center mb-4">Courier Management</h3>
+    <div class="card">
+      <div class="card-header fedex-purple">
+        List of Couriers
+      </div>
+      <div class="card-body">
+          <table class="table table-bordered table-striped">
+      <thead class="table-warning">
         <tr>
           <th>#</th>
           <th>Name</th>
@@ -40,18 +45,21 @@ include "../includes/header.php";
             <td><?= htmlspecialchars($row['name']) ?></td>
             <td><?= htmlspecialchars($row['email']) ?></td>
             <td>
-              <?= $row['courier_id'] ? '<span class="badge bg-success">Info Set</span>' : '<span class="badge bg-secondary">Not Set</span>' ?>
+              <?= $row['courier_id'] ? '<span class="badge fedex-purple">Info Set</span>' : '<span class="badge fedex-orange">Not Set</span>' ?>
             </td>
             <td>
               <?php if ($row['courier_id']) { ?>
-                <a href="courier_edit_info.php?id=<?= $row['courier_id'] ?>" class="btn btn-sm btn-warning">Edit Info</a>
-                <a href="courier_view_info.php?id=<?= $row['courier_id'] ?>" class="btn btn-sm btn-info text-white">See Info</a>
+                <a href="courier_edit_info.php?id=<?= $row['courier_id'] ?>" class="btn btn-sm btn-fedex">Edit Info</a>
+                <a href="courier_view_info.php?id=<?= $row['courier_id'] ?>" class="btn btn-sm btn-fedex text-white">See Info</a>
               <?php } else { ?>
-                <a href="courier_add_info.php?user_id=<?= $row['id'] ?>" class="btn btn-sm btn-primary">Add Info</a>
+                <a href="courier_add_info.php?user_id=<?= $row['id'] ?>" class="btn btn-sm btn-orange">Add Info</a>
               <?php } ?>
             </td>
           </tr>
         <?php } ?>
       </tbody>
     </table>
+      </div>
+    </div>
+    
   </div>
