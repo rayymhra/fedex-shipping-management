@@ -53,8 +53,12 @@ if (isset($_POST['submit'])) {
   <?php include '../includes/header.php'; ?>
 
   <div class="container mt-4">
-    <h2>Edit Courier Info</h2>
-    <form method="POST">
+    <div class="card">
+      <div class="card-header fedex-purple">
+        Edit Courier Info
+      </div>
+      <div class="card-body">
+          <form method="POST" class="container">
       <div class="mb-3">
         <label class="form-label">Full Name</label>
         <input type="text" name="name" value="<?= htmlspecialchars($data['name']) ?>" class="form-control" required>
@@ -83,8 +87,12 @@ if (isset($_POST['submit'])) {
         </select>
       </div>
 
-      <button type="submit" name="submit" class="btn btn-primary">Update Info</button>
+      <button type="submit" name="submit" class="btn btn-fedex">Update Info</button>
+      <a href="couriers.php" class="btn btn-orange">Cancel</a>
     </form>
+      </div>
+    </div>
+    
   </div>
 </body>
 </html>
