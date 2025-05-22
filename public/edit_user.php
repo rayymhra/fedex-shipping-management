@@ -42,10 +42,16 @@ include '../includes/header.php';
   <meta charset="UTF-8">
   <title>Edit User</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+
 </head>
 <body>
-  <h3>Edit User</h3>
-  <form method="post" class="row g-3 mb-4">
+  <div class="card">
+    <div class="card-header fedex-purple">
+      Edit User
+    </div>
+    <div class="card-body">
+      <form method="post" class="row g-3 mb-4 container">
     <div class="col-md-4">
       <label class="form-label">Name</label>
       <input type="text" name="name" class="form-control" value="<?= htmlspecialchars($user['name']) ?>" required>
@@ -66,14 +72,17 @@ include '../includes/header.php';
     </div>
 
     <div class="col-md-6">
-      <label class="form-label">New Password <small class="text-muted">(leave blank to keep current)</small></label>
+      <label class="form-label">New Password <small class="text-muted">(just leave it blank to keep the current password you have)</small></label>
       <input type="password" name="password" class="form-control">
     </div>
 
     <div class="col-md-12">
-      <button class="btn btn-success">Update User</button>
-      <a href="users.php" class="btn btn-secondary">Cancel</a>
+      <button class="btn btn-fedex">Update User</button>
+      <a href="users.php" class="btn btn-orange">Cancel</a>
     </div>
   </form>
+    </div>
+  </div>
+  
 </body>
 </html>
