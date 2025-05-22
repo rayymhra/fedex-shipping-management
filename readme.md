@@ -37,7 +37,7 @@
 [v] couriers.php <br>
 [v] courier_edit_info.php <br>
 [v] courier_add_info.php <br>
-[] courier_view_info.php <br>
+[v] courier_view_info.php <br>
 [] customers.php <br>
 - staff pages <br>
 [] customer_management.php <br>

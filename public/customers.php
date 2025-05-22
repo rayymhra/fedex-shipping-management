@@ -13,9 +13,13 @@ $customers = mysqli_query($conn, "SELECT * FROM customers WHERE deleted_at IS NU
 
 <div class="container mt-4">
     <h2 class="mb-4">Customer List</h2>
-
-    <table class="table table-bordered table-striped">
-        <thead class="table-dark">
+    <div class="card">
+        <div class="card-header fedex-purple">
+            Customer List
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+        <thead class="table-warning">
             <tr>
                 <th>#</th>
                 <th>Name</th>
@@ -41,6 +45,9 @@ $customers = mysqli_query($conn, "SELECT * FROM customers WHERE deleted_at IS NU
             <?php endwhile; ?>
         </tbody>
     </table>
+        </div>
+    </div>
+    
 </div>
 
 <?php include '../includes/footer.php'; ?>
