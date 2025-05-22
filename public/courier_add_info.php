@@ -31,8 +31,12 @@ if (isset($_GET['user_id'])) {
 include "../includes/header.php";
 ?>
 
-<!-- HTML FORM -->
-<form method="POST">
+<div class="card">
+  <div class="card-header fedex-purple">
+    Add Courier Info
+  </div>
+  <div class="card-body">
+    <form method="POST">
   <div class="mb-3">
     <input type="text" name="name" placeholder="Full Name" required class="form-control">
   </div>
@@ -53,5 +57,9 @@ include "../includes/header.php";
   </div>
     
   
-    <button type="submit" name="submit" class="btn btn-primary">Save Courier Info</button>
+    <button type="submit" name="submit" class="btn btn-fedex">Save Courier Info</button>
+    <a href="couriers.php" class="btn btn-orange">Cancel</a>
 </form>
+
+  </div>
+</div>
