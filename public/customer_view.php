@@ -18,12 +18,12 @@ $result = mysqli_query($conn, $query);
 include "../includes/header.php"
 ?>
 
-<h2>Customer Detail</h2>
-    <a href="customer_management.php" class="btn btn-secondary mb-4">← Back to Customer List</a>
+<h3 class="text-center">Customer Detail</h3>
+    <a href="customer_management.php" class="btn btn-orange mb-4">Back</a>
 
     <div class="card mb-4">
-        <div class="card-header">
-            <strong><?= htmlspecialchars($customer['name']) ?></strong>
+        <div class="card-header fedex-purple">
+            <h5><strong><?= htmlspecialchars($customer['name']) ?></strong></h5>
         </div>
         <div class="card-body">
             <p><strong>Email:</strong> <?= htmlspecialchars($customer['email'] ?? '-') ?></p>
@@ -31,15 +31,20 @@ include "../includes/header.php"
             <p><strong>Notes:</strong> <?= nl2br(htmlspecialchars($customer['notes'] ?? '-')) ?></p>
             <p><strong>Created At:</strong> <?= $customer['created_at'] ?></p>
             <p><strong>Updated At:</strong> <?= $customer['updated_at'] ?></p>
-            <a href="customer_edit.php?id=<?= $customer_id ?>" class="btn btn-warning">Edit Customer</a>
+            <a href="customer_edit.php?id=<?= $customer_id ?>" class="btn btn-orange">Edit Customer</a>
         </div>
     </div>
 
-<h3>Addresses</h3>
-<a href="address_add.php?customer_id=<?= $customer_id ?>" class="btn btn-primary mb-3">Add Address</a>
+<h3 class="text-center mt-5">Addresses</h3>
+<a href="address_add.php?customer_id=<?= $customer_id ?>" class="btn btn-fedex mb-3">Add Address</a>
 
-<table class="table table-bordered">
-  <thead>
+<div class="card">
+  <div class="card-header fedex-purple">
+    List of addresses
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+  <thead class="table-warning">
     <tr>
       <th>Label</th>
       <th>Street</th>
@@ -60,10 +65,12 @@ include "../includes/header.php"
         <td><?= htmlspecialchars($address['postal_code']) ?></td>
         <td><?= htmlspecialchars($address['country']) ?></td>
         <td>
-          <a href="address_edit.php?id=<?= $address['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-          <a href="address_delete.php?id=<?= $address['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Delete this address?')">Delete</a>
+          <a href="address_edit.php?id=<?= $address['id'] ?>" class="btn btn-sm btn-fedex">Edit</a>
+          <a href="address_delete.php?id=<?= $address['id'] ?>" class="btn btn-sm btn-orange" onclick="return confirm('Delete this address?')">Delete</a>
         </td>
       </tr>
     <?php endwhile; ?>
   </tbody>
 </table>
+  </div>
+</div>

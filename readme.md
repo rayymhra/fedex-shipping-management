@@ -41,7 +41,7 @@
 [v] customers.php <br>
 - staff pages <br>
 [v] customer_management.php <br>
-[] customer_view.php <br>
+[v] customer_view.php <br>
 [] customer_edit.php <br>
 [] address_add.php <br>
 [] address_edit.php <br>
