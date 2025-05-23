@@ -44,8 +44,7 @@
 [v] customer_view.php <br>
 [v] customer_edit.php <br>
 [v] address_add.php <br>
-[] address_edit.php <br>
-[] customer_edit <br>
+[v] address_edit.php <br>
 [] shipments.php <br>
 [] shipment_view.php <br>
 [] shipment_edit.php <br>
