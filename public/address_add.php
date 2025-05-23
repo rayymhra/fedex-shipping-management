@@ -28,10 +28,12 @@ if (isset($_POST['submit'])) {
 include "../includes/header.php"
 
 ?>
-
-<h2>Add Address for Customer #<?= htmlspecialchars($customer_id) ?></h2>
-
-<?php if (isset($error)) echo "<p class='text-danger'>$error</p>"; ?>
+<div class="card">
+  <div class="card-header fedex-purple">
+    Add Address for Customer <strong>#<?= htmlspecialchars($customer_id) ?></strong>
+  </div>
+  <div class="card-body">
+    <?php if (isset($error)) echo "<p class='text-danger'>$error</p>"; ?>
 
 <form method="post">
   <div class="mb-3">
@@ -58,6 +60,10 @@ include "../includes/header.php"
     <label>Country</label>
     <input type="text" name="country" class="form-control" required>
   </div>
-  <button type="submit" name="submit" class="btn btn-success">Add Address</button>
-  <a href="customer_view.php?id=<?= $customer_id ?>" class="btn btn-secondary">Cancel</a>
+  <button type="submit" name="submit" class="btn btn-fedex">Add Address</button>
+  <a href="customer_view.php?id=<?= $customer_id ?>" class="btn btn-orange">Cancel</a>
 </form>
+  </div>
+</div>
+
+

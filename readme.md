@@ -43,7 +43,7 @@
 [v] customer_management.php <br>
 [v] customer_view.php <br>
 [v] customer_edit.php <br>
-[] address_add.php <br>
+[v] address_add.php <br>
 [] address_edit.php <br>
 [] customer_edit <br>
 [] shipments.php <br>

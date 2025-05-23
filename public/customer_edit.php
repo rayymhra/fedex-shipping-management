@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
             <textarea name="notes" class="form-control"><?= htmlspecialchars($customer['notes']) ?></textarea>
         </div>
         <button type="submit" name="submit" class="btn btn-fedex">Update Customer</button>
-        <a href="customer_list_staff.php" class="btn btn-orange">Cancel</a>
+        <a href="customer_management.php" class="btn btn-orange">Cancel</a>
     </form>
 </div>
         </div>
