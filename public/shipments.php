@@ -27,17 +27,24 @@ include "../includes/header.php";
 <head>
     <title>Shipment List</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
     <div class="container">
-        <h2>All Shipments</h2>
+        <h3 class="text-center">All Shipments</h3>
         <?php if (isset($_GET['success'])): ?>
             <div class="alert alert-success">Shipment created successfully!</div>
         <?php endif; ?>
 
-        <a href="shipment_create.php" class="btn btn-primary">Add New Shipment</a>
-        <table class="table table-bordered table-striped mt-3">
-            <thead>
+        <a href="shipment_create.php" class="btn btn-fedex">Add New Shipment</a>
+
+        <div class="card mt-3">
+            <div class="card-header fedex-purple">
+                List of Shipments
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped mt-3">
+            <thead class="table-warning">
                 <tr>
                     <th>Tracking Code</th>
                     <th>Customer</th>
@@ -69,13 +76,16 @@ include "../includes/header.php";
                         </td>
                         <td><?= $row['expected_delivery_date'] ?? '-' ?></td>
                         <td>
-                            <a href="shipment_view.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-primary">View</a>
-                            <a href="shipment_tracking.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-success">Track</a>
+                            <a href="shipment_view.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-fedex">View</a>
+                            <a href="shipment_tracking.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-orange">Track</a>
                         </td>
                     </tr>
                 <?php endwhile ?>
             </tbody>
         </table>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
