@@ -38,9 +38,9 @@
 [v] courier_edit_info.php <br>
 [v] courier_add_info.php <br>
 [v] courier_view_info.php <br>
-[] customers.php <br>
+[v] customers.php <br>
 - staff pages <br>
-[] customer_management.php <br>
+[v] customer_management.php <br>
 [] customer_view.php <br>
 [] customer_edit.php <br>
 [] address_add.php <br>
