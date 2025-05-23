@@ -42,7 +42,7 @@
 - staff pages <br>
 [v] customer_management.php <br>
 [v] customer_view.php <br>
-[] customer_edit.php <br>
+[v] customer_edit.php <br>
 [] address_add.php <br>
 [] address_edit.php <br>
 [] customer_edit <br>

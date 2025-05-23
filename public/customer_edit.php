@@ -35,9 +35,12 @@ if (isset($_POST['submit'])) {
 <?php include '../includes/header.php'; ?>
 
 <div class="container mt-4">
-    <h2>Edit Customer</h2>
-
-    <?php if (!empty($error)) : ?>
+    <div class="card">
+        <div class="card-header fedex-purple">
+            Edit Customer
+        </div>
+        <div class="card-body">
+            <?php if (!empty($error)) : ?>
     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
 
@@ -58,9 +61,13 @@ if (isset($_POST['submit'])) {
             <label>Notes</label>
             <textarea name="notes" class="form-control"><?= htmlspecialchars($customer['notes']) ?></textarea>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Update Customer</button>
-        <a href="customer_list_staff.php" class="btn btn-secondary">Cancel</a>
+        <button type="submit" name="submit" class="btn btn-fedex">Update Customer</button>
+        <a href="customer_list_staff.php" class="btn btn-orange">Cancel</a>
     </form>
 </div>
+        </div>
+    </div>
+
+    
 
 <?php include '../includes/footer.php'; ?>
