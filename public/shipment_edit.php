@@ -50,6 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Get current shipment data
 $result = mysqli_query($conn, "SELECT * FROM shipments WHERE id=$shipment_id");
 $shipment = mysqli_fetch_assoc($result);
+
+include "../includes/header.php";
 ?>
 
 <!DOCTYPE html>
@@ -57,11 +59,16 @@ $shipment = mysqli_fetch_assoc($result);
 <head>
     <title>Edit Shipment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="bg-light">
 <div class="container py-5">
-    <h2>Edit Shipment</h2>
-    <form method="POST">
+    <div class="card">
+        <div class="card-header fedex-purple">
+            Edit Shipment
+        </div>
+        <div class="card-body">
+            <form method="POST">
         <div class="mb-3">
             <label>Recipient Label</label>
             <input type="text" name="recipient_label" class="form-control" value="<?= htmlspecialchars($shipment['recipient_label']) ?>" required>
@@ -106,9 +113,12 @@ $shipment = mysqli_fetch_assoc($result);
             <label>Notes</label>
             <textarea name="notes" class="form-control"><?= htmlspecialchars($shipment['notes']) ?></textarea>
         </div>
-        <button type="submit" class="btn btn-success">💾 Save Changes</button>
-        <a href="shipment_view.php?id=<?= $shipment_id ?>" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-fedex">Save</button>
+        <a href="shipment_view.php?id=<?= $shipment_id ?>" class="btn btn-orange">Cancel</a>
     </form>
+        </div>
+    </div>
+    
 </div>
 </body>
 </html>

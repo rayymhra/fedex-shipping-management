@@ -37,7 +37,7 @@ include "../includes/header.php";
 <body class="bg-light">
 <div class="container py-5">
 
-    <a href="shipments.php" class="btn btn-orange mb-4">← Back to List</a>
+    <a href="shipments.php" class="btn btn-orange mb-4">Back to List</a>
     <div class="card">
         <div class="card-header fedex-purple">
             Shipment Details
