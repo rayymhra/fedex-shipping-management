@@ -33,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: my_shipments.php");
     exit;
 }
+
+include "../includes/header.php";
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +42,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <title>Update Shipment Status</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="bg-light">
 <div class="container py-5">
-    <h2 class="mb-4">Update Status for Shipment: <?= htmlspecialchars($shipment['tracking_code']) ?></h2>
-
-    <form method="post">
+    <div class="card">
+        <div class="card-header fedex-purple">
+            Update Status for Shipment: <?= htmlspecialchars($shipment['tracking_code']) ?>
+        </div>
+        <div class="card-body">
+            <form method="post">
         <div class="mb-3">
             <label class="form-label">New Status</label>
             <select name="status" class="form-select" required>
@@ -57,9 +63,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endforeach ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Update Status</button>
-        <a href="my_shipments.php" class="btn btn-secondary">Back</a>
+        <button type="submit" class="btn btn-fedex">Update Status</button>
+        <a href="my_shipments.php" class="btn btn-orange">Back</a>
     </form>
+        </div>
+    </div>
+
+    
 </div>
 </body>
 </html>
