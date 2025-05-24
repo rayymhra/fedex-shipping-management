@@ -59,6 +59,8 @@ $checkpoints = mysqli_query(
      WHERE shipment_id = $shipment_id 
      ORDER BY checkpoint_time DESC"
 );
+
+include "../includes/header.php";
 ?>
 
 <!DOCTYPE html>
@@ -70,6 +72,7 @@ $checkpoints = mysqli_query(
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     >
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="bg-light">
 <div class="container py-5">
@@ -78,8 +81,8 @@ $checkpoints = mysqli_query(
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Track: <?= htmlspecialchars($shipment['tracking_code']) ?></h2>
         <div>
-            <a href="shipments.php" class="btn btn-secondary">← Back to List</a>
-            <a href="shipment_view.php?id=<?= $shipment_id ?>" class="btn btn-outline-primary">View Details</a>
+            <a href="shipments.php" class="btn btn-orange">Back to List</a>
+            <!-- <a href="shipment_view.php?id=<?= $shipment_id ?>" class="btn btn-outline-primary">View Details</a> -->
         </div>
     </div>
 
@@ -90,8 +93,10 @@ $checkpoints = mysqli_query(
 
     <!-- Update Form -->
     <div class="card mb-4 shadow-sm">
+        <div class="card-header fedex-purple">
+            Add Checkpoint
+        </div>
         <div class="card-body">
-            <h5 class="card-title">Add Checkpoint</h5>
             <form method="post" class="row g-3">
                 <div class="col-md-6">
                     <!-- <label class="form-label">Status</label>
@@ -126,7 +131,7 @@ $checkpoints = mysqli_query(
                     >
                 </div>
                 <div class="col-md-1 d-grid">
-                    <button type="submit" class="btn btn-primary mt-4">Add</button>
+                    <button type="submit" class="btn btn-fedex mt-4">Add</button>
                 </div>
             </form>
         </div>
@@ -134,8 +139,11 @@ $checkpoints = mysqli_query(
 
     <!-- Checkpoint History -->
     <div class="card shadow-sm">
+        <div class="card-header fedex-purple">
+            Checkpoint History
+        </div>
         <div class="card-body">
-            <h5 class="card-title">Checkpoint History</h5>
+            <h5 class="card-title"></h5>
             <?php if (mysqli_num_rows($checkpoints) > 0): ?>
                 <ul class="list-group">
                     <?php while ($cp = mysqli_fetch_assoc($checkpoints)): ?>

@@ -48,7 +48,7 @@
 [v] shipments.php <br>
 [v] shipment_view.php <br>
 [v] shipment_edit.php <br>
-[] shipment_tracking <br>
+[v] shipment_tracking <br>
 - courier pages <br>
 [] my_shipments.php <br>
 [] update_status.php <br>
