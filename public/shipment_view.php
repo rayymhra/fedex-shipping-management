@@ -23,6 +23,8 @@ if (!$result || mysqli_num_rows($result) == 0) {
 }
 
 $shipment = mysqli_fetch_assoc($result);
+
+include "../includes/header.php";
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +32,16 @@ $shipment = mysqli_fetch_assoc($result);
 <head>
     <title>Shipment Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body class="bg-light">
 <div class="container py-5">
-    <h2 class="mb-4">Shipment Details</h2>
-    <a href="shipments.php" class="btn btn-secondary mb-4">← Back to List</a>
 
+    <a href="shipments.php" class="btn btn-orange mb-4">← Back to List</a>
     <div class="card">
+        <div class="card-header fedex-purple">
+            Shipment Details
+        </div>
         <div class="card-body">
             <h5 class="card-title">Tracking Code: <?= htmlspecialchars($shipment['tracking_code']) ?></h5>
             <p><strong>Customer ID:</strong> <?= $shipment['customer_id'] ?></p>
@@ -59,9 +64,9 @@ $shipment = mysqli_fetch_assoc($result);
         </div>
     </div>
     <div class="mt-3">
-        <a href="shipment_edit.php?id=<?= $shipment['id'] ?>" class="btn btn-warning">Edit</a>
+        <a href="shipment_edit.php?id=<?= $shipment['id'] ?>" class="btn btn-fedex">Edit</a>
             <a href="shipment_delete.php?id=<?= $shipment['id'] ?>" 
-               class="btn btn-danger"
+               class="btn btn-orange"
                onclick="return confirm('Are you sure you want to delete this shipment?');">
                 Delete
             </a>
