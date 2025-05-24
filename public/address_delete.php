@@ -10,7 +10,5 @@ $id = $_GET['id'];
 $query = "UPDATE addresses SET deleted_at = NOW() WHERE id = $id";
 mysqli_query($conn, $query);
 
-// Redirect back to customer view
-// You might want to fetch customer_id before delete to redirect properly
-header("Location: customer_list.php?success=address_deleted");
+header("Location: customer_management.php?success=address_deleted");
 exit;
